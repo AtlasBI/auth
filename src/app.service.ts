@@ -13,4 +13,16 @@ export class AppService {
   signup(): string {
     return 'Signup';
   }
+
+  signin(): string {
+    return 'signin';
+  }
+
+  forgot(): string {
+    return 'forgot';
+  }
+
+  tokenUpdate(): string {
+    return 'tokenUpdate';
+  }
 }

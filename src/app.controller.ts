@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -15,8 +15,23 @@ export class AppController {
     return this.appService.users();
   }
 
-  @Get('/signup')
+  @Post('/signup')
   signup(): string {
     return this.appService.signup();
+  }
+
+  @Post('/signin')
+  signin(): string {
+    return this.appService.signin();
+  }
+
+  @Get('/forgot')
+  forgot(): string {
+    return this.appService.forgot();
+  }
+
+  @Get('/tokenUpdate')
+  tokenUpdate(): string {
+    return this.appService.tokenUpdate();
   }
 }
